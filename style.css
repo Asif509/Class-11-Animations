@@ -1,0 +1,177 @@
+*{
+    float: left;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.div-one{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    margin: 100px;
+    transition: 1s;
+}
+.div-one:hover{
+    transform: scale(1.5, 2);
+    /* transform: scaleX(1.5);
+    transform: scaleY(1.5); */
+    float: left;
+
+}
+
+.div-two{
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    float: left;
+    transition: 1s;
+    margin-top: 100px;
+}
+.div-two:hover{
+    /* transform: rotate(360deg); */
+    /* transform: rotateX(45deg); */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateX(360deg); */
+    transform: rotateY(90deg);
+}
+.div-three{
+    height: 200px;
+    width: 200px;
+    background-color: chartreuse;
+    transition: 1s;
+    margin-top: 100px;
+}
+
+.div-three:hover{
+    /* transform: translate(20px, 20px); !* (X,Y) */
+    /* transform: translate(-88px , 0px);  (X,Y) */
+    transform: translate( 88px , -68px);
+}
+.div-four{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(240, 17, 20);
+    transition: 1s;
+    margin-top: 100px;
+}
+.div-four:hover{
+    /* transform: skew(40deg); */
+    /* transform: skewX(-40deg); */
+    transform: skewY(40deg);
+}
+
+.div-five{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(194, 65, 65);
+    transition: 1s;
+    margin-top: 100px;
+    transform: skewY(45deg);
+}
+.div-six{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(194, 65, 151);
+    transition: 1s;
+    margin-top: 100px;
+    transform: skewY(-45deg);
+}
+.box-one{
+    height:250px;
+    width: 300px;
+    background-color: blue;
+    margin-top: 150px;
+    animation-name: kisuNa;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /*animation-delay: 2s;*/
+}
+
+@keyframes bitm {
+    from{
+        background-color: blue;
+    }
+    to{
+        background-color: red;
+    }
+
+}
+
+@keyframes kisuNa {
+    0% {background-color: blue}
+    25% {background-color: green}
+    50% {background-color: red}
+    75% {background-color:darkviolet}
+}
+
+.box-two{
+    height: 450px;
+    width: 800px;
+    margin-top: 20px;
+    background-image: url("../images/pexels-yuliya-strizhkina-1198802.jpg");
+    background-size: cover;
+    background-position: center;
+
+    animation-name: imageSlider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imageSlider {
+    0% {background-image: url("../images/pexels-yuliya-strizhkina-1198802.jpg")}
+    25% {
+        background-image: url("../images/pexels-pixabay-372166.jpg");
+    }
+    50% {background-image: url("../images/pexels-pixabay-459203.jpg")}
+    75% {background-image: url("../images/pexels-julius-silver-753626.jpg")}
+    100% {background-image: url("../images/pexels-katie-burandt-1212693.jpg")}
+}
+
+.box-three {
+    height: 200px;
+    width: 30px;
+    background-color: brown;
+    float:right;
+    animation-name: fan;
+    animation-duration: 10ms;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes fan {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box-four {
+    margin-top: 20px;
+    height: 400px;
+    width: 225px;
+    background-image: url("../images/ganghum.png");
+    animation: ganghum 4s steps(23, start) infinite,
+    movearound 12s steps(69, end) infinite alternate 44ms;
+    animation-direction: normal, alternate;
+}
+
+@keyframes movearound {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(600px);
+    }
+}
+
+@keyframes ganghum {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -5175px 0;
+    }
+}
